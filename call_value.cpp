@@ -14,7 +14,6 @@ int main()
     int n, n1;
     cout << "enter two number:";
     cin >> n>>n1;
- 
     cout << "before swap a:" << n << endl;
     cout << "before swap b:" << n1 << endl;
    swap(n,n1);
