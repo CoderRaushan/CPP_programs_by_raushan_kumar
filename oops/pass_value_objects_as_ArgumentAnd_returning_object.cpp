@@ -23,7 +23,7 @@ int main()
 {
     sample t, s;
     t.getvalue();
-    cout<<"before giving address:";
+    cout<<"before giving address:"<<endl;
     t.display();
     cout << endl;
     s=t.sum(t);
