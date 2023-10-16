@@ -5,7 +5,6 @@ class Parent
 public: 
     int id_p; 
 }; 
-  
 class Child : public Parent 
 { 
 public: 
