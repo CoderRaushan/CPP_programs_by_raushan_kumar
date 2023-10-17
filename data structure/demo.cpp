@@ -1,8 +1,9 @@
 #include<iostream>
 #define SPACE 10
+
 using namespace std;
-class TreeNode 
-{
+
+class TreeNode {
   public:
     int value;
   TreeNode * left;
@@ -13,8 +14,7 @@ class TreeNode
     left = NULL;
     right = NULL;
   }
-  TreeNode(int v) 
-  {
+  TreeNode(int v) {
     value = v;
     left = NULL;
     right = NULL;
@@ -24,9 +24,8 @@ class TreeNode
 class BST 
 {
   public:
-  TreeNode * root;
-  BST() 
-  {
+    TreeNode * root;
+  BST() {
     root = NULL;
   }
   bool isTreeEmpty() 
@@ -34,46 +33,33 @@ class BST
     if (root == NULL) 
     {
       return true;
-    } 
-    else 
-    {
+    } else {
       return false;
     }
   }
   void insertNode(TreeNode * new_node) 
   {
-    if (root == NULL) 
-    {
+    if (root == NULL) {
       root = new_node;
-      cout << "Value Inserted as root node" << endl;
-    } 
-    else 
-    {
+      cout << "Value Inserted as root node!" << endl;
+    } else {
       TreeNode * temp = root;
-      while (temp != NULL) 
-      {
-        if (new_node -> value == temp -> value) 
-        {
+      while (temp != NULL) {
+        if (new_node -> value == temp -> value) {
           cout << "Value Already exist," <<
             "Insert another value!" << endl;
           return;
-        } 
-        else if ((new_node -> value < temp -> value) && (temp -> left == NULL)) {
+        } else if ((new_node -> value < temp -> value) && (temp -> left == NULL)) {
           temp -> left = new_node;
           cout << "Value Inserted to the left!" << endl;
           break;
-        } 
-        else if (new_node -> value < temp -> value) 
-        {
+        } else if (new_node -> value < temp -> value) {
           temp = temp -> left;
-        } 
-        else if ((new_node -> value > temp -> value) && (temp -> right == NULL)) {
+        } else if ((new_node -> value > temp -> value) && (temp -> right == NULL)) {
           temp -> right = new_node;
           cout << "Value Inserted to the right!" << endl;
           break;
-        } 
-        else 
-        {
+        } else {
           temp = temp -> right;
         }
       }
@@ -106,30 +92,29 @@ class BST
 
   void print2D(TreeNode * r, int space) 
   {
-    if (r == NULL) // Base case  1
-      return;
-    space += SPACE; // Increase distance between levels   2
-    print2D(r -> right, space); // Process right child first 3 
+    if (r == NULL) 
+     {
+       return;
+     }
+    space = space+SPACE; 
+    print2D(r -> right, space);
     cout << endl;
-    for (int i = SPACE; i < space; i++) // 5 
-      cout << " "; // 5.1  
-    cout << r -> value << "\n"; // 6
-    print2D(r -> left, space); // Process left child  7
+    for (int i = SPACE; i < space; i++) 
+      cout << " ";   
+    cout << r -> value << "\n"; 
+    print2D(r -> left, space); 
   }
 
-  void printPreorder(TreeNode * r) //(current node, Left, Right) 
+  void printPreorder(TreeNode * r)  
   {
     if (r == NULL)
       return;
-    /* first print data of node */
     cout << r -> value << " ";
-    /* then recur on left sutree */
     printPreorder(r -> left);
-    /* now recur on right subtree */
     printPreorder(r -> right);
   }
 
-  void printInorder(TreeNode * r) //  (Left, current node, Right)
+  void printInorder(TreeNode * r) 
   {
     if (r == NULL)
       return;
@@ -152,15 +137,19 @@ class BST
     cout << r -> value << " ";
   }
 
-  TreeNode * iterativeSearch(int v) {
-    if (root == NULL) {
+  TreeNode * iterativeSearch(int v) 
+  {
+    if (root == NULL) 
+    {
       return root;
     } else {
       TreeNode * temp = root;
       while (temp != NULL) {
-        if (v == temp -> value) {
+        if (v == temp -> value) 
+        {
           return temp;
-        } else if (v < temp -> value) {
+        } else if (v < temp -> value) 
+        {
           temp = temp -> left;
         } else {
           temp = temp -> right;
@@ -170,7 +159,8 @@ class BST
     }
   }
 
-  TreeNode * recursiveSearch(TreeNode * r, int val) {
+  TreeNode * recursiveSearch(TreeNode * r, int val) 
+  {
     if (r == NULL || r -> value == val)
       return r;
 
@@ -181,7 +171,8 @@ class BST
       return recursiveSearch(r -> right, val);
   }
 
-  int height(TreeNode * r) {
+  int height(TreeNode * r) 
+  {
     if (r == NULL)
       return -1;
     else {
@@ -293,8 +284,8 @@ int main() {
 	      cout <<"Enter VALUE of TREE NODE to INSERT in BST: ";
 	      cin >> val;
 	      new_node->value = val;
-	      obj.root= obj.insertRecursive(obj.root,new_node);
-	      //obj.insertNode(new_node);
+	      //obj.root= obj.insertRecursive(obj.root,new_node);
+	      obj.insertNode(new_node);
 	      cout<<endl;
     		break;
       
@@ -348,6 +339,8 @@ int main() {
     default:
       cout << "Enter Proper Option number " << endl;
     }
+
   } while (option != 0);
+
   return 0;
 }

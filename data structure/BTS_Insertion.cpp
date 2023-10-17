@@ -20,7 +20,6 @@ public:
         right = NULL;
     }
 };
-
 class BST
 {
 public:
@@ -46,7 +45,6 @@ public:
         {
             root = n;
             cout << "Value Inserted as root node";
-            return;
         }
         else
         {
@@ -59,22 +57,21 @@ public:
                          << "Insert another value!" << endl;
                     return;
                 }
-                else if (n->value < temp->value && temp->left == NULL)
+                else if ((n->value < temp->value) && (temp->left == NULL))
                 {
                     temp->left = n;
                     cout << "Value Inserted to the left!" << endl;
-                    return;
+                    break;
                 }
                 else if (n->value < temp->value)
                 {
                     temp = temp->left;
-                    return;
                 }
-                else if (n->value > temp->value && right == NULL)
+                else if ((n->value > temp->value) && (temp->right == NULL))
                 {
                     temp->right = n;
                     cout << "Value Inserted to the right!" << endl;
-                    return;
+                    break;
                 }
                 else
                 {
@@ -83,75 +80,100 @@ public:
             }
         }
     }
-    void print2D(Node *r, int space)
+    void preorderprint(Node *r)
     {
         if (r == NULL)
         {
             return;
         }
-        else
+        cout << r->value << " ";
+        preorderprint(r->left);
+        preorderprint(r->right);
+    }
+    void InorderPrint(Node *r)
+    {
+        if (r == NULL)
         {
-            space += space;
-            print2D(r->right, space);
-            cout << endl;
-            for (int i = space; i < space; i++)
-                cout << " ";
-            cout << r->value << "\n";
-            print2D(r->left, space);
+            return;
         }
+        InorderPrint(r->left);
+        cout << r->value << " ";
+        InorderPrint(r->right);
+    }
+    void PostorderPrint(Node *r)
+    {
+        if (r == NULL)
+        {
+            return;
+        }
+        PostorderPrint(r->left);
+        PostorderPrint(r->right);
+        cout << r->value << " ";
+    }
+    void print2D(Node * r, int space)
+    {
+      if (r == NULL)
+        {
+            return;
+        }
+        space = space+SPACE; 
+        print2D(r->right,space);
+        cout<<endl;
+        for (int i =SPACE; i < space; i++)
+        {
+           cout<<" ";
+        }
+        cout << r->value <<endl;
+        print2D(r->left,space);
     }
 };
 int main()
 {
     BST obj;
     int option, val;
-
     do
     {
         cout << "What operation do you want to perform? "
              << " Select Option number. Enter 0 to exit." << endl;
         cout << "1. Insert Node" << endl;
-        cout << "4. Print/Traversal BST values" << endl;
-        cout << "6. Clear Screen" << endl;
-        cout << "0. Exit Program" << endl;
-
+        cout << "2. display" << endl;
+        cout << "3. Clear Screen" << endl;
+        cout << "4. Exit Program" << endl;
         cin >> option;
         Node *n = new Node();
         switch (option)
         {
-        case 0:
-            break;
         case 1:
             cout << "INSERT" << endl;
             cout << "Enter VALUE of TREE NODE to INSERT in BST: ";
             cin >> val;
             n->value = val;
-            obj.root = obj.print2D(obj.root,);
-            // obj.insertNode(new_node);
+            obj.insert(n);
             cout << endl;
             break;
-        case 4:
-            cout << "PRINT 2D: " << endl;
-            obj.print2D(obj.root, 5);
+        case 2: 
+              cout << "2D print: " << endl;
+              obj.print2D(obj.root,5);
+              cout<<endl;
+            cout << "PRE-ORDER: " << endl;
+            obj.preorderprint(obj.root);
             cout << endl;
-            cout << "Print Level Order BFS: \n";
-            obj.printLevelOrderBFS(obj.root);
             cout << endl;
-            //	      cout <<"PRE-ORDER: ";
-            //	      obj.printPreorder(obj.root);
-            //	      cout<<endl;
-            //	      cout <<"IN-ORDER: ";
-            //	      obj.printInorder(obj.root);
-            //	      cout<<endl;
-            //	      cout <<"POST-ORDER: ";
-            //	      obj.printPostorder(obj.root);
+            cout << "IN-ORDER: " << endl;
+            obj.InorderPrint(obj.root);
+            cout << endl;
+            cout << endl;
+            cout << "POST-ORDER: " << endl;
+            obj.PostorderPrint(obj.root);
+            cout << endl;
+            cout << endl;
             break;
-        case 6:
+        case 3:
             system("cls");
             break;
         default:
             cout << "Invalid Input:" << endl;
         }
-    } while (option != 0);
+    } while (option != 4);
     return 0;
 }
