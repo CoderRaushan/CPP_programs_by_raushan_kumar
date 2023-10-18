@@ -159,7 +159,7 @@ int main()
             obj.preorderprint(obj.root);
             cout << endl;
             cout << endl;
-            cout << "IN-ORDER: " << endl;
+            cout << "IN-ORDER: " << endl;   
             obj.InorderPrint(obj.root);
             cout << endl;
             cout << endl;

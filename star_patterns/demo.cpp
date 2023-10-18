@@ -1,29 +1,16 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
+void  fun(int s)//5
+{
+   if(s<=0)
+   {
+    return;
+   }
+    fun(s-1);//step 1
+    cout<<s;//step 2
+}
 int main()
 {
-    int i, j, n;
-    cout << "enter a number:";
-    cin >> n;
-    cout<<"\n";
-    for (i = 1; i <= n; i++)
-    {
-        for (j = 1; j<=n; j++)
-        {  
-            if (j<=i)
-            {
-                cout <<char(65+n-j)<<" ";
-               
-            }
-            else 
-            {
-                cout <<" ";
-            }
-          
-        }
-        cout << "\n";
-      
-    }
-
-    return 0;
+fun(5);
+ return 0;
 }

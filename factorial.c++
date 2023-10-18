@@ -1,24 +1,24 @@
-// #include<iostream>
-// using namespace std;
-// int factorial(int n)
-// {
-//     if (n > 1)
-//     {
-//         return n * factorial(n - 1);
-//     }
-//     else 
-//     {
-//      return n;
-//     }
-// }
-// int main()
-// {
-//     int n;
-//     cout << "enter a number:";
-//     cin >> n;
-//     cout << factorial(n);
-//     return 0;
-// }
+#include<iostream>
+using namespace std;
+int factorial(int n)
+{
+    if (n > 1)
+    {
+        return n*factorial(n - 1);
+    }
+    else 
+    {
+     return n;
+    }
+}
+int main()
+{
+    int n;
+    cout << "enter a number:";
+    cin >> n;
+    cout << factorial(n);
+    return 0;
+}
 
 // #include<iostream>
 // using namespace std;
@@ -41,16 +41,16 @@
 //  }
 // return 0;
 // }
-#include<iostream>
-using namespace std;
-int main()
-{
-    int n,sum=1;
-    cin>>n;
- for ( int i = 1; i <=n; i++)
- {
-   sum=sum*i;
- }
- cout<<sum;
-return 0;
-}
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n,sum=1;
+//     cin>>n;
+//  for ( int i = 1; i <=n; i++)
+//  {
+//    sum=sum*i;
+//  }
+//  cout<<sum;
+// return 0;
+// }
