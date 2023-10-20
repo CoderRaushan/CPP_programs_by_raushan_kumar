@@ -58,6 +58,5 @@ int main()
     obj.display();
     obj--;
     obj.display();
-
     return 0;
 }

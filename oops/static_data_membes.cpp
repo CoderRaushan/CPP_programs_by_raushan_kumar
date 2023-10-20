@@ -2,7 +2,6 @@
 using namespace std;
 class Cube
 {
-
 public:
     static int objectCount;
     Cube()
