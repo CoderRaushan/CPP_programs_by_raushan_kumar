@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-void insertionSort(int arr[],int s)
+void selectionSort(int arr[],int s)
 {
     int min,temp;
     for (int i = 0; i < s-1; i++)
@@ -38,7 +38,7 @@ int main()
  {
    cout<<arr[i]<<" ";
  }
- insertionSort(arr,s);
+ selectionSort(arr,s);
  cout<<"Sorted array elelments are:"<<endl;
  for (int i = 0; i < s; i++)
  {
