@@ -39,7 +39,7 @@ int main()
    cout<<arr[i]<<" ";
  }
  selectionSort(arr,s);
- cout<<"Sorted array elelments are:"<<endl;
+ cout<<endl<<"Sorted array elelments are:"<<endl;
  for (int i = 0; i < s; i++)
  {
    cout<<arr[i]<<" ";
