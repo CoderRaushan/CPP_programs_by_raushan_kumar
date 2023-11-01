@@ -1,4 +1,6 @@
-#include<bits/stdc++.h>
+//file reading operation
+#include<iostream>
+#include<fstream>
 using namespace std;
 int main()
 {
