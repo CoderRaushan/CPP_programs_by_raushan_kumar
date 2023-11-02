@@ -1,18 +1,21 @@
 #include<iostream>
 using namespace std;
-
-class Time { 
+class Time
+{
 private:
   int h, m;
 public:
-  void getValue() {
+  void getValue()
+  {
     cout << "Enter hours & minutes: ";
     cin >> h >> m;
   }
-  void putValue() {
+  void putValue()
+  {
     cout << "Hours: " << h << ", Minutes: " << m << endl;
   }
-  void sum(Time t1, Time t2) {
+  void sum(Time t1, Time t2)
+  {
     h = (t1.m + t2.m) / 60;
     m = (t1.m + t2.m) % 60;
     h = h + t1.h + t2.h;
@@ -20,16 +23,17 @@ public:
   }
 };
 
-int main() {
+int main()
+{
   Time t1, t2, t3;
 
   t1.getValue();
   t2.getValue();
 
   t1.putValue();
-  t2.putValue();                                      
+  t2.putValue();
 
   t3.sum(t1, t2);
 
   return 0;
-}
+} 
