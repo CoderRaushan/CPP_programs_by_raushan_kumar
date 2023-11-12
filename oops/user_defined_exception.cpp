@@ -1,37 +1,34 @@
-#include <iostream>
-#include <exception>
+#include<iostream>
+#include<exception>
 using namespace std;
-class OverSpeed : public exception
+class overspeed:public exception
 {
-    int speed;
-
-public:
-    const char *what()
-    {
-        return "check yout car speed you are in the car not in an aeroplane ";
-    }
+int speed;
+public :
+const char *what()
+{
+    return "check your speed you are in car not in aeroplane:";
+}
 };
 int main()
 {
-    int carspeed = 0;
-    try
+    int carspeed=0;
+ try
+ {
+    while (1)
     {
-        while (1)
+        carspeed+=10;
+        if (carspeed>100)
         {
-            carspeed = carspeed + 10;
-            if (carspeed > 100)
-            {
-
-                OverSpeed s;
-                throw s;
-            }
-            cout << "Carspeed: " << carspeed << endl;
+            overspeed o;
+            throw o;
         }
+         cout<<"car speed is:"<<carspeed<<endl;
     }
-    catch (OverSpeed ex)
+ }
+  catch(overspeed r)
     {
-        cout << ex.what();
+         cout<<r.what();
     }
-
-    return 0;
+return 0;
 }

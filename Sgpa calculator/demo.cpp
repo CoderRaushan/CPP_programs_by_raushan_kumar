@@ -1,27 +1,34 @@
-#include <iostream>
-#include <vector>
+#include<iostream>
+#include<exception>
 using namespace std;
-vector<string> generateArray(int n) 
+class overloading:public exception
 {
-    if (n == 0) 
+    int speed;
+    public:
+    const char *what()
     {
-        return vector<string>();
-    } 
-    else 
+      return "checkyour speed";
+    }
+};
+int main()
+{ int carspeed=0;
+ try
+ {
+    while(1)
     {
-        vector<string> result = generateArray(n - 1);
-        result.push_back("Coding Ninjas");
-        return result;
+      carspeed=carspeed+10;
     }
-}
-
-int main() 
-{
-    int n;
-    cin >> n;
-    vector<string> result = generateArray(n);
-    for (const string& element : result) {
-        cout << element << " ";
+    if (carspeed>100)
+    {
+        overloading o;
+       throw o;
     }
-    return 0;
+    cout<<"speed is:"<<carspeed;
+    
+ }
+ catch(overloading e)
+ {
+    cout<<e.what();
+ }
+return 0;
 }

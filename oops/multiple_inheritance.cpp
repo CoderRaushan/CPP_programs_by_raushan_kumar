@@ -17,8 +17,8 @@ public:
         cout << "This is a 4 wheeler Vehicle\n";
     }
 };
-class Car : public Vehicle, public FourWheeler
-{
+class Car : public Vehicle,FourWheeler
+{ 
 
 };
 int main()

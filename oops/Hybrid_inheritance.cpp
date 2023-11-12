@@ -8,8 +8,6 @@ public:
         cout << "This is a Vehicle\n"; 
     } 
 }; 
-
-
 class Fare 
 {   
 public: 
