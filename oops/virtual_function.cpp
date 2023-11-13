@@ -10,7 +10,7 @@ class base
 };
 class derived1 : public base 
 {
-      public:
+      public: 
   void function()
   {
     cout<<"i am in derived class 1:"<<endl;
