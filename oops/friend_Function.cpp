@@ -5,9 +5,9 @@ class Distance
 private:
     int meters;
 public:
-    Distance()
+    Distance(int d=0)
     {
-        meters = 0;
+        meters = d;
     }
     void displayData() 
     {
@@ -17,11 +17,11 @@ public:
 };
 void addValue(Distance &d)
 {   
-    d.meters=d.meters+6;
+    d.meters=d.meters+5;
 }
 int main()
 {
-    Distance d1; //0
+    Distance d1(5); //0
     d1.displayData();//0
     addValue(d1);//5
     d1.displayData();//5

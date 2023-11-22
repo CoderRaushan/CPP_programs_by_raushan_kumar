@@ -37,7 +37,7 @@ int main()
     demo d1(4, 6);
     demo d2(3, 7);
     demo d3;
-     //d3=d1.add(d2);//way 1
+    // d3=d1.add(d2);//way 1
     d3 = d1 + d2;//way 2
     d3.print();
     return 0;

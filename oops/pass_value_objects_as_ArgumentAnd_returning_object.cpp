@@ -13,20 +13,20 @@ public:
     {
         cout << value;
     }
-    sample sum(sample s)
-    {
+    sample sum(sample &s)
+    {  
         s.value = s.value + 10;
         return s;
     }
 };
 int main()
 {
-    sample t, s;
+    sample t, s,h;
     t.getvalue();
     cout<<"before giving address:"<<endl;
     t.display();
     cout << endl;
-    s=t.sum(t);
+    s=h.sum(t);
     s.display();
     cout << endl;
     t.display();
