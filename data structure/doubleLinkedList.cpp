@@ -49,11 +49,15 @@ class DoublyLinkedList
 
   // 2. Append a node to the list
 
-  void appendNode(Node * n) {
-    if (nodeExists(n -> key) != NULL) {
+  void appendNode(Node * n) 
+  {
+    if (nodeExists(n -> key) != NULL) 
+    {
       cout << "Node Already exists with key value : " << n -> key << ". Append another node with different Key value" << endl;
-    } else {
-      if (head == NULL) {
+    } 
+    else {
+      if (head == NULL) 
+      {
         head = n;
         cout << "Node Appended as Head Node" << endl;
       } else {

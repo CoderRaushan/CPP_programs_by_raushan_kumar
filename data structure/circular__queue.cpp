@@ -59,11 +59,11 @@ public:
     }
     int dequeue()
     {
-        int a=0;
+        int a;
         if (is_empty())
         {
             cout << "stack is underflow:" << endl;
-            return a;
+            return 0;
         }
         else if (front == rear)
         {
