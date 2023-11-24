@@ -68,7 +68,7 @@ public:
             cout << "the element present in lined list is:" << endl;
             while (temp != NULL)
             {
-                cout << temp->data<<endl;
+                cout << temp->data<<" -> ";
                 temp = temp->next;
             }
         }
@@ -90,7 +90,7 @@ cout<<"inserting -23 in linklist:"<<endl;
 l.insert(-23);
 cout<<"no of elements in linkedlist is:"<<endl;
 l.display();
-cout<<"deleting 77"<<endl;
+cout<<endl<<"deleting 77"<<endl;
 l.deletedata(77);
 cout<<"deleting 3"<<endl;
 l.deletedata(3);
