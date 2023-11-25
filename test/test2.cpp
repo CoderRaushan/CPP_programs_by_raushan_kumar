@@ -44,9 +44,9 @@ public:
       prev=temp;
       temp=temp->next;
    }
-   if(temp==NULL)
+   if(temp->next==NULL)
    {
-    cout<<todel<<"not found"<<endl;
+    cout<<todel<<"not found "<<endl;
     return;
    }
    else
@@ -94,6 +94,8 @@ cout<<endl<<"deleting 77"<<endl;
 l.deletedata(77);
 cout<<"deleting 3"<<endl;
 l.deletedata(3);
+cout<<"deleting 99"<<endl;
+l.deletedata(99);
 cout<<"deleting 12"<<endl;
 l.deletedata(12);
 cout<<"total element present in linkdlist are:"<<endl;
