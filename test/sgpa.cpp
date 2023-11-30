@@ -2,7 +2,6 @@
 using namespace std;
 int main()
 {
-    
     int n, c, DSA = 3, OOPs = 3, DCLD = 3, DCCN = 3, PPLE = 3, DSALab = 1, DCCNLab = 1, DCLDLab = 1,OOPsLab=1,Training=1,Seminar=1;
     int c1 = DSA + OOPs + DCLD + DCCN + PPLE + DSALab + DCCNLab + DCLDLab+OOPsLab+Training+Seminar;
     double arr[10], o, o1, o2, o3, o4, o5, o6, o7,o8,o9,o10;
@@ -44,10 +43,9 @@ int main()
     double res7 = p7 * DCCNLab;
     double res8 = p8 * DCLDLab;
     double res9 = p9 * Training;
-    double res10 = 10 * Seminar;
-    double dum = res + res1 + res2 + res3 + res4 + res5 + res6 + res7 +res8 + res9 + res10;
-    double sgpa = dum / c1;
-    cout<<"ram"<<dum<<endl;
+    double res10 = p10 * Seminar;
+    double sum = res + res1 + res2 + res3 + res4 + res5 + res6 + res7 +res8 + res9 + res10;
+    double sgpa = sum / c1;
     cout << "SGPA\n"
          << sgpa;
     return 0;
