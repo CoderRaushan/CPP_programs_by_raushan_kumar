@@ -1,4 +1,4 @@
-//stack
+// stack
 #include <iostream>
 using namespace std;
 class stack
@@ -6,7 +6,6 @@ class stack
 private:
     int top;
     int arr[5];
-
 public:
     stack()
     {
@@ -15,7 +14,7 @@ public:
         {
             arr[i] = 0;
         }
-    }                                 
+    }
     bool is_empty()
     {
         if (top == -1)
@@ -38,7 +37,6 @@ public:
             return false;
         }
     }
-
     void push(int value)
     {
         if (is_full())
@@ -101,27 +99,28 @@ int main()
         case 3:
             if (s1.is_empty())
             {
-                cout << "stack is empty" << endl;
+                cout << "stack is empty:" << endl;
             }
             else
             {
-                cout << "stack is not empty" << endl;
+                cout << "stack is not empty:" << endl;
             }
             break;
         case 4:
             if (s1.is_full())
             {
-                cout << "stack is full" << endl;
+                cout << "stack is full:" << endl;
             }
             else
             {
-                cout << "stack is not full" << endl;
+                cout << "stack is not full:" << endl;
             }
             break;
         case 5:
             cout << "the elements in stack is:" << endl;
             s1.display();
-        default:cout<<"enter valid option"<<endl;
+        default:
+            cout << "enter valid option" << endl;
         }
     } while (option != 6);
     return 0;

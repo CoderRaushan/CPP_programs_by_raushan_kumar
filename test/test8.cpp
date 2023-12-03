@@ -1,3 +1,4 @@
+//stack using linked list
 #include <bits/stdc++.h>
 using namespace std;
 class Node
@@ -28,10 +29,8 @@ public:
         }
         else
         {
-            
              newnode->next = top;
               top = newnode;
-
         }
     }
     void deletedata()
@@ -52,7 +51,6 @@ public:
     void disply()
     {
         Node *temp = top;
-
         if (temp == NULL)
         {
             cout << "no any element is present in the stack:" << endl;
