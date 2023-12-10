@@ -25,8 +25,6 @@ Complex operator+(Complex c2)
     return temp;
 }
 };
-
-
 int main()
 {
     Complex<int> c1(3, 5), c2(3,2), c3;
@@ -36,7 +34,6 @@ int main()
     Complex<float> c4(3.6f, 5.6f), c5(3.1f,2.7f), c6;
     c6 = c4 + c5;
     c6.display();
-
     Complex<double> c7(3.634, 5.6234), c8(3.123,2.723), c9;
     c9 = c7 + c8;
     c9.display();
