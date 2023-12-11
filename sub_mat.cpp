@@ -2,9 +2,7 @@
 using namespace std;
 int main()
 {
-    int a[3][3],b[3][3],c[3][3],i, j;
-    
-        
+    int a[3][3],b[3][3],c[3][3],i, j;        
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 3; j++)
@@ -38,10 +36,8 @@ int main()
         for (j = 0; j < 3; j++)
         {
             cout<<c[i][j]<<" ";
-             
         }
        cout<<"\n";
     }
-    
     return 0;
 }

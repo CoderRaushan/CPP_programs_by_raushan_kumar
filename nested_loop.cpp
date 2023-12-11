@@ -12,8 +12,6 @@ int main()
         cout<<x*i<<" ";
     }
     cout<<"\n";
-
-    
  }
  
 return 0;

@@ -31,7 +31,8 @@ int main()
 //  {
 //     cout<<n;
 //  }
-//  else {
+//  else 
+//{
 //  while (i<=n)
 //  {
 //    sum=sum*i;

@@ -9,7 +9,8 @@ int main()
  if (ch>='0' && ch<='9')
  {
     cout<< "nomericle value";
- }else
+ }
+ else
  {
 cout<<"character";
  }
