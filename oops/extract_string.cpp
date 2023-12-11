@@ -1,9 +1,10 @@
 #include <iostream>
 #include <string>
 using namespace std;
-int main() {
+int main() 
+{
     string original = "HelloWorld!";
-    string substring = original.substr(5,5);
+    string substring = original.substr(5,2);
     cout << "Original String: " << original<< endl;
     cout << "Substring: " << substring << endl;
     return 0;
