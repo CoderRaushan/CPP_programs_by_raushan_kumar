@@ -8,7 +8,7 @@ int main()
     char ch[50];
     cout<< "Enter string value:";
     cin.getline(ch,50);
-    file>> ch;
+    file >> ch;
     if (file.good())
     {
         cout << "Data written successfully in the File..." << endl;
@@ -17,5 +17,6 @@ int main()
     {
         cout << "Operation unsuccessful" << endl;
     }
+    file.close();
     return 0;
 }

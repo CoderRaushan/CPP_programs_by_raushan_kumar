@@ -7,7 +7,8 @@ int main()
     fstream file;
     file.open("my file.txt", ios::out);
     char ch[50];
-    file >> ch;
+    // file >> ch;
+    file.getline(ch,50);
     if (file.fail())
     {
         cout << "Operation not success!!!" << endl;
@@ -16,5 +17,6 @@ int main()
     {
         cout << "Data read from file - "<< ch << endl;
     }
+    file.close();
     return 0;
 }

@@ -9,7 +9,8 @@ int main()
     while (!file.eof())
     {
         file >> data;
-        cout << "data read: " << data;
     }
+    cout << "data read: " << data;
+    file.close();
     return 0;
 }
