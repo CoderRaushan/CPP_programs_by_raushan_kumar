@@ -6,7 +6,7 @@ void frequency()
     cout << "enter positive integer number:";
     cin >> n;
     d = n;
-    cout << "enter a peticular number to count frequency of that numver:";
+    cout << "enter a peticular number to count frequency of that number:";
     cin >> f;
     while (n != 0)
     {

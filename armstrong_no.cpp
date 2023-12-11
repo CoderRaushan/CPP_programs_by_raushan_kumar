@@ -6,7 +6,7 @@ int main()
     cout << "enter a number:" << endl;
     cin >> n; // 153
     f = n;
-    while (n != 0)
+    while (n!= 0)
     {
         c = n % 10;
         arm = arm + (c * c * c); // 27+125+1=153
