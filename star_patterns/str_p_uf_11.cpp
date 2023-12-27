@@ -12,14 +12,14 @@ int main()
         {
             if (j>n+1-i and j<n-1+i)
             {
-                printf(" ");
+                cout<<" ";
             }
             else
             {
-                printf("*");
+                cout<<"*";
             }
         }
-       printf("\n");
+      cout<<endl;
     }
      for (i = 3; i <= n+1; i++)
     {
