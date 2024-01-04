@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
- int i,arr[100],n;
+ int max=INT_MIN,arr[100],n,i;
 cout<<"enter size of array:"<<endl;
 cin>>n;
 cout<<"enter elements of array:"<<endl;
@@ -11,16 +11,15 @@ for ( i = 1; i <=n; i++)
    cin>>arr[i];
 }
 cout<<"greater element in an array::"<<endl;
-int temp;
-temp=arr[1];
+max=arr[1];
 for ( i = 2; i <=n; i++)//{76,66,39,89,99,42}
 {
    
-    if(temp < arr[i])//temp
+    if(max < arr[i])
     {
-      temp=arr[i];
+      max=arr[i];
     }
 } 
-cout<<temp<<endl; 
+cout<<max<<endl; 
 return 0;
 }

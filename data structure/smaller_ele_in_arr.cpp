@@ -2,25 +2,24 @@
 using namespace std;
 int main()
 {
- int i,arr[100],n;
+ int min=INT_MAX, i,arr[100],n;
 cout<<"enter size of array:"<<endl;
 cin>>n;
 cout<<"enter elements of array:"<<endl;
-for ( i = 1; i <=n; i++)
+for ( i = 0; i <n; i++)
 {
    cin>>arr[i];
 }
 cout<<"smallerst element in an array::"<<endl;
 int temp;
-temp=arr[1];
-for ( i = 2; i <=n; i++)//{76,66,39,89,99,42}
+min=arr[0];
+for ( i = 1; i < n; i++)//{76,66,39,89,99,42}
 {
-   
-    if(temp > arr[i])//temp
+    if(min > arr[i])//temps
     {
-      temp=arr[i];
+      min=arr[i];
     }
 } 
-cout<<temp<<endl; 
+cout<<min<<endl; 
 return 0;
 }
