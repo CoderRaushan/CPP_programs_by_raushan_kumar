@@ -2,17 +2,15 @@
 using namespace std;
 int linearsearch(int arr[], int n, int x)
 {
-    int i;
-    for (i = 0; i < n; i++)
+    
+    for (int i = 0; i < n; i++)
     {
         if (arr[i] == x)
         {
             return i;
         }
-        
     }      
-return -1;
-        
+return -1;      
 }
 
 int main()
@@ -33,6 +31,17 @@ int main()
     if (index == -1)
         cout << "Element is not present in the array";
     else
-        cout << "Element is found at location:" << index;
+        cout << "Element is found at index:" << index;
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
