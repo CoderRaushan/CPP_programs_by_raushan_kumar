@@ -8,7 +8,8 @@ int main()
  {
     cout<<*ptr<<" ";
     ptr++;
- }
+   // cout<<ptr[i]<<" " ;
+}
  
 return 0;
 }
