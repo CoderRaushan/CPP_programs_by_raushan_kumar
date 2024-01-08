@@ -11,8 +11,6 @@ void display(vector<int> &v)
 void reversepart(int i, int j, vector<int> &v)
 {
     while (i <= j)
-    {
-        while (i <= j)
         {
             int temp = v[i];
             v[i] = v[j];
@@ -20,7 +18,6 @@ void reversepart(int i, int j, vector<int> &v)
             i++;
             j--;
         }
-    }
 }   
     int main()
     {
@@ -34,7 +31,7 @@ void reversepart(int i, int j, vector<int> &v)
         v1.push_back(4);
         v1.push_back(8);
         display(v1);
-        int k = 20;
+        int k = 7;
         int n = v1.size();
          if(k>n)
          {
