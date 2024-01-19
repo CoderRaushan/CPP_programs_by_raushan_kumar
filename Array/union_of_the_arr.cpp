@@ -17,7 +17,8 @@ vector<int> sortedArray(vector<int> a, vector<int> b) {
             }
                i++;
         } 
-        else {
+        else 
+        {
             if (c.size() == 0 || c.back() != b[j]) 
             {
                 c.push_back(b[j]);

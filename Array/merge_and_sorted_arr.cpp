@@ -47,7 +47,7 @@ vector<int> sortedArray(vector<int> a, vector<int> b) {
 }
 int main() 
 {
-      vector<int> array1 = {1, 3, 5, 7, 9};
+    vector<int> array1 = {1, 3, 5, 7, 9};
     vector<int> array2 = {2, 4, 6, 8, 10};
 
     vector<int> result = sortedArray(array1, array2);
