@@ -37,3 +37,22 @@ int main()
 
 }
 
+
+// void rotateMatrix(std::vector<std::vector<int>> &mat)
+// {
+//     int n = mat.size();
+//     for (int i = 0; i < n - 1; i++)
+//     {
+//         for (int j = i + 1; j < n; j++)
+//         {
+//             // Swap elements mat[i][j] and mat[j][i]
+//             int temp = mat[i][j];
+//             mat[i][j] = mat[j][i];
+//             mat[j][i] = temp;
+//         }
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         std::reverse(mat[i].begin(), mat[i].end());
+//     }
+// }
