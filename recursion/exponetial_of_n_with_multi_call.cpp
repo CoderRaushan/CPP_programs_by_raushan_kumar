@@ -9,6 +9,7 @@ else return i*ans*ans;
 }
 int main()
 {
-cout<<pow(2,8);
+cout<<pow(2,0);
 return 0;
-}
+}//space complexity o(logn)
+//time complexity o(logn)
