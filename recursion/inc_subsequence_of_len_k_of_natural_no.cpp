@@ -22,7 +22,7 @@ void substing(int arr[], vector<int> ans, int n, int idx, int k)
 int main()
 {
 
-    int arr[] = {1, 2, 3, 4, 5};
+    int arr[] = {1, 2, 3};
     int n = sizeof(arr) / sizeof(arr[0]);
     vector<int> v;
     int k = 3;
