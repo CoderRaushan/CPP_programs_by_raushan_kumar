@@ -14,7 +14,6 @@ void permutation(string ans,string original)
    string right=original.substr(i+1);
    permutation(ans+ch,left+right);
  }
- 
 }
 int main()
 {
