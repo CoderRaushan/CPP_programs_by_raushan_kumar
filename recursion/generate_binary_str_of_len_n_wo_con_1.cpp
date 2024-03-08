@@ -7,12 +7,15 @@ if(str.length()==n)
  cout<<str<<endl;
  return;
 }
-binary(""+0,n);
-binary(""+1,n);
+binary(str+"0",n);
+if(str=="" ||  str[str.length()-1]=='0') 
+{
+    binary(str+"1",n);
+}
 }
 int main()
 {
-int n=4;
+int n=3;
 binary("",n);
 return 0;
 }
