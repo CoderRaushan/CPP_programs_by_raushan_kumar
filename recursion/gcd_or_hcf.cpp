@@ -10,5 +10,5 @@ int main()
  int a=27;
  int b=45;
  cout<<gcd(10000,10001);
-return 0;
+ return 0;
 }
