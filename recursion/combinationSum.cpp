@@ -16,16 +16,16 @@ void combibation(vector<int> v, int arr[], int target, int n, int idx)
     for (int i = idx; i <n; i++)
     {
         v.push_back(arr[i]);
-        combibation(v, arr, target - arr[i], n, idx);
+        combibation(v, arr, target - arr[i], n,i);
         v.pop_back();
     }
 }
 int main()
 {
-    int arr[] = {2, 3, 5};
+    int arr[] = {1,2,3};
     vector<int> v;
     int n = sizeof(arr) / sizeof(arr[0]);
-    int target = 8;
+    int target = 6;
     combibation(v, arr, target, n, 0);
     return 0;
 }
