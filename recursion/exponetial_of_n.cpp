@@ -10,6 +10,6 @@ int main()
 {
  cout<<pow(4,0);
 return 0;
-
+}
 //space complexity o(n)
 //time complexity o(n)
