@@ -35,7 +35,7 @@ int main()
  substing(str1,original,v,true);
  for(string ele:v)
  {
-    cout<<ele<<endl;
+   cout<<ele<<endl;
  }
 return 0;
 }
