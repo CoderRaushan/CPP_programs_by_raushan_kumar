@@ -1,31 +1,52 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-void combibation(vector<int> v, int arr[], int target, int n, int idx)
+void helper(vector<int> &ARR, int target, int idx, int n, vector<int> ds, vector<vector<int>> &ans)
 {
-    if (target == 0)
+    if (idx == n)
     {
-        for (int i = 0; i < v.size(); i++)
+        if (target == 0)
         {
-            cout << v[i] << " ";
+            ans.push_back(ds);
         }
-        cout << endl;
         return;
     }
-    if (target < 0)
-        return;
-    for (int i = idx; i <n; i++)
+    else
     {
-        v.push_back(arr[i]);
-        combibation(v, arr, target - arr[i], n,i);
-        v.pop_back();
+        if (ARR[idx] <= target)
+        {
+            ds.push_back(ARR[idx]);
+            helper(ARR, target - ARR[idx], idx, n, ds, ans);
+            ds.pop_back();
+        }
+        helper(ARR, target, idx + 1, n, ds, ans);
     }
+}
+
+vector<vector<int>> combSum(vector<int> &ARR, int B)
+{
+    sort(ARR.begin(), ARR.end());
+    vector<vector<int>> ans;
+    
+    vector<int> ds;
+ 
+    return ans;
 }
 int main()
 {
-    int arr[] = {1, 2, 3, 1, 1, 1};
-    vector<int> v;
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int target = 6;
-    combibation(v, arr, target, n, 0);
+    vector<vector<int>>ans;
+    vector<int> ARR = {1, 2, 3, 1};
+    sort(ARR.begin(), ARR.end());
+    vector<int> ds;
+    int n = ARR.size();
+    int target = 5;
+    helper(ARR,target , 0, n, ds, ans);
+     for (int i = 0; i < ans.size(); i++)
+    {
+        for (int j = 0; j < ans[i].size(); j++)
+        {
+            cout << ans[i][j] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }
