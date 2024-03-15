@@ -22,10 +22,10 @@ void combibation(vector<int> v, int arr[], int target, int n, int idx)
 }
 int main()
 {
-    int arr[] = {1, 2, 3, 1};
+    int arr[] = {10,1,2,7,6,1,5};
     vector<int> v;
     int n = sizeof(arr) / sizeof(arr[0]);
-    int target = 5;
+    int target = 6;
     combibation(v, arr, target, n, 0);
     return 0;
 }
