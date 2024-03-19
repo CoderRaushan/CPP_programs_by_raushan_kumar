@@ -19,5 +19,5 @@ int main()
 {
  string str="raushan";
  cout<<palindromstr(str);
-return 0;
+ return 0;
 }
