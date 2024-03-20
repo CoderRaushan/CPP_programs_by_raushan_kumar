@@ -12,7 +12,7 @@ int main()
  bool flag=true;
  for (int i = 0; i <str.length()-1; i++)
  {
-    for (int j = 0; j <str.length()-1; j++)
+    for (int j = 0; j <str.length()-1-i; j++)
     {
        if(str[j]<str[j+1])
        {
