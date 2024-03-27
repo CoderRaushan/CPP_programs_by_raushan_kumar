@@ -59,6 +59,7 @@ vector<int> sortArray(vector<int> &nums)
     }
     sortArray(a);
     sortArray(b);
+    b.clear(); a.clear();//space complexity becomes o(n)
     merge(a, b,nums,n1,n2);
     return nums;
 }
