@@ -29,7 +29,7 @@ void binaryseach(vector<int>&nums,int target)
 int main()
 {
  vector<int>nums{1,3,4,5,4,4,4,4,4,4,5,6,7,8,9};
- int x=45;
+ int x=4;
  binaryseach(nums,x);
 return 0;
 }
