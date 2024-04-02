@@ -7,7 +7,7 @@ int binaryseach(vector<int>&nums,int target)
     int high=n-1;
     while(low<=high)
     {
-        int mid=(low+high)/2;
+        int mid=low+(high-low)/2;
         if(nums[mid]==target) return mid ;
         else if(nums[mid]<target) low=mid+1;
         else high=mid-1;
@@ -17,7 +17,7 @@ int binaryseach(vector<int>&nums,int target)
 int main()
 {
  vector<int>nums{1,3,4,5,6,7,8,9};
- int target=68;
+ int target=8;
  cout<<binaryseach(nums,target);
 return 0;
 }
