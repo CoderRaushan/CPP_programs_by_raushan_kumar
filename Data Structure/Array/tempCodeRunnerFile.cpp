@@ -1,3 +1,4 @@
-vector<vector<int>>v;
-//  vector<vector<int>>v(4);
-// vector<vector<int>>v(4,vector<int>(4));
+ // for (int  i = annstar; i < end; i++)
+    // {
+    //     cout<<nums[i]<<" ";
+    // }
