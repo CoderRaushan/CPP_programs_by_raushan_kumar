@@ -23,6 +23,7 @@ int main()
               string val2=val.top();
               val.pop();
               string val1=val.top();
+              val.pop();
               char ch=s[i];
               string ans=calculate(val1,val2,ch);
               val.push(ans);

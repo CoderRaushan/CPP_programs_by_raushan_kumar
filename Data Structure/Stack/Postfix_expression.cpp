@@ -26,6 +26,7 @@ int main()
               int val2=val.top();
               val.pop();
               int val1=val.top();
+              val.pop();
               char ch=s[i];
               int ans=calculate(val1,val2,ch);
               val.push(ans);
