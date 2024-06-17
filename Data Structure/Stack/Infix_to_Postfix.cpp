@@ -11,18 +11,19 @@ int priority(char c)
 }
 string evaluate(string val1, string val2, char ch)
 {
-    //prefix to infix ---> val1 op val2
+    //infix to postfix ---> val1 val2 op
     string s="";
     s=s+val1;
-    s.push_back(ch); 
     s=s+val2;
+    s.push_back(ch); 
     return s;
 }
 int main()
 {
     stack<string> val;
     stack<char> op;
-    string s = "(1+(4+5+2)-3)+(6+8)";
+    string s = "(7+9)*4/8-3";
+    // string s="(a+b)*(c+d)";
     for (int i = 0; i < s.length(); i++)
     {
         if (s[i] == ' ')
