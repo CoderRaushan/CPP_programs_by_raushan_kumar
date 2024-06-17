@@ -1,10 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-    int priority(char c)
-    {
-        if(c=='/' || c=='*') return 2;
-        else return 1;
-    }
     int calculate(int val1,int val2,char ch)
     {
         if(ch=='+') return val1+val2;
