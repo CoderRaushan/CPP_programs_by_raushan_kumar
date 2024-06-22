@@ -42,14 +42,16 @@ int maximumofnode(TreeNode *root)
     if(root==NULL) return INT_MIN;
     return max(root->val,max(maximumofnode(root->left),maximumofnode(root->right)));
 }
-// height of treenode
-int heightoftreenode(TreeNode *root)
+// levels of treenode
+//height=levels-1;
+int levelsofnode(TreeNode *root)
 {
     if(root==NULL) return 0;
-    return 1+max(heightoftreenode(root->left),heightoftreenode(root->right));
+    return 1+max(levelsofnode(root->left),levelsofnode(root->right));
 }
 // hw ->product of all nodes
 //      mini of all nodes
+//symmetry tree
 int main()
 {
     // creating obj of treenode
@@ -74,7 +76,7 @@ int main()
     cout<<sumof(a)<<endl;
     cout<<sizeofnode(a)<<endl;
     cout<<maximumofnode(a)<<endl;
-    cout<<heightoftreenode(a)<<endl;
+    cout<<levelsofnode(a)<<endl;
 
     return 0;
 }
