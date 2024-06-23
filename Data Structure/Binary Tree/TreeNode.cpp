@@ -16,13 +16,32 @@ public:
     }
 };
 // display function
-void display(TreeNode *root)
+// preorder traversal
+void displaypre(TreeNode *root)
 {
     if (root == NULL)
         return;
     cout << root->val<<" ";
-    display(root->left);
-    display(root->right);
+    displaypre(root->left);
+    displaypre(root->right);
+} 
+// inorder traversal
+void displayin(TreeNode *root)
+{
+    if (root == NULL)
+        return; 
+    displayin(root->left);
+    cout << root->val<<" ";
+    displayin(root->right);
+} 
+// postorder traversal
+void displaypost(TreeNode *root)
+{
+    if (root == NULL)
+        return;
+    displaypost(root->left);
+    displaypost(root->right);
+    cout << root->val<<" ";
 } 
 // sum of nodes 
 int sumof(TreeNode *root)
@@ -61,7 +80,7 @@ int main()
     TreeNode *d = new TreeNode(4);
     TreeNode *e = new TreeNode(5);
     TreeNode *f = new TreeNode(6);
-    TreeNode *g = new TreeNode(34);
+    TreeNode *g = new TreeNode(7);
 
     // buidling connection b/w them
     a->left = b;
@@ -71,12 +90,17 @@ int main()
     c->left = f;
     c->right = g;
 
-    display(a);
+    displaypre(a);
     cout<<endl;
     cout<<sumof(a)<<endl;
     cout<<sizeofnode(a)<<endl;
     cout<<maximumofnode(a)<<endl;
     cout<<levelsofnode(a)<<endl;
-
+    cout<<"preorder"<<endl;
+    displaypre(a);
+    cout<<endl;
+    displayin(a);
+    cout<<endl;
+    displaypost(a);
     return 0;
 }
