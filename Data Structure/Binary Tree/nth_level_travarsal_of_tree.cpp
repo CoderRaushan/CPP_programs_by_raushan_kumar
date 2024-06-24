@@ -39,6 +39,19 @@ void nth_levelReverse(TreeNode *root,int curr,int level)
     nth_levelReverse(root->right,curr+1,level);
     nth_levelReverse(root->left,curr+1,level);
 } 
+void BFS_traversal_usringQueue(TreeNode *root)
+{
+  queue<TreeNode*>que;
+  que.push(root);
+  while(que.size()>0)
+  {
+      TreeNode * temp=que.front();
+       cout<<temp->val<<" ";
+       que.pop();
+       if(temp->left!=NULL) que.push(temp->left);
+       if(temp->right!=NULL)que.push(temp->right);
+  }
+}
 int main()
 {
     // creating obj of treenode
@@ -59,8 +72,9 @@ int main()
     c->right = g;
 
 
-    nth_level(a,1,3);
-    cout<<endl;
-    nth_levelReverse(a,1,3);
+    // nth_level(a,1,3);
+    // cout<<endl;
+    // nth_levelReverse(a,1,3);
+    BFS_traversal_usringQueue(a);
     return 0;
 }
