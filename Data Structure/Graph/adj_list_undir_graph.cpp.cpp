@@ -17,6 +17,7 @@
         5 -> 1 , 2 ,
         6 -> 3 , 4 ,
     */
+   //    undirected graph
     vector<list<int>>graph;//A list in C++ is a doubly linked list;
     void add(int src,int dest,bool bidirecitonal=true)
     {
