@@ -9,13 +9,14 @@
      [1]-------[5]        [6]--------[4]
      no of edges 7
      neighbour of vertices are:
-        0 -> 2 , 1 ,
-        1 -> 0 , 5 ,
-        2 -> 0 , 5 , 3 ,
-        3 -> 2 , 6 ,
-        4 -> 6 ,
-        5 -> 1 , 2 ,
-        6 -> 3 , 4 ,
+     Neighbours and weight  of vertices are:
+    0 -> (3 3), (1 2),
+    1 -> (4 5), (2 4), (0 2),
+    2 -> (1 4), (3 1),
+    3 -> (2 1), (0 3),
+    4 -> (5 6), (1 5),
+    5 -> (6 7), (4 6),
+    6 -> (5 7),
     */
    //    undirected graph
     vector<list<int>>graph;//A list in C++ is a doubly linked list;
